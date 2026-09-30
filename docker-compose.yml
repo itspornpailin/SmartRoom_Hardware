@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: aiot_db
+      TZ: Asia/Bangkok
+      PGTZ: Asia/Bangkok
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - aiot-net
+
+  mqtt-broker:
+    image: eclipse-mosquitto:2
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
+    networks:
+      - aiot-net
+
+  node-red:
+    image: nodered/node-red:latest
+    environment:
+      - TZ=Asia/Bangkok
+    ports:
+      - "1880:1880"
+    volumes:
+      - ./node_red_data:/data
+    networks:
+      - aiot-net
+
+networks:
+  aiot-net:
+    driver: bridge
+

@@ -1,0 +1,779 @@
+[
+    {
+        "id": "28c1f6723d4dba29",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "497eae2cd4cdc31d",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "30732449395ceab4",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "da9b7dd6ae72f571",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "category": "",
+        "in": [],
+        "out": [],
+        "env": [
+            {
+                "name": "DESK_ID",
+                "type": "str",
+                "value": "env_desk_01"
+            },
+            {
+                "name": "AC_ID",
+                "type": "str",
+                "value": "ac_01"
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "674080d8d83bad96",
+        "type": "subflow",
+        "name": "Subflow 2",
+        "info": "",
+        "category": "",
+        "in": [],
+        "out": [],
+        "env": [
+            {
+                "name": "AC_ID",
+                "type": "str",
+                "value": "ac_01"
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "01d7ac7240a0bfe5",
+        "type": "mqtt-broker",
+        "name": "Mqtt-Project",
+        "broker": "mqtt-broker",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "c8b658a11d65050f",
+        "type": "ui_tab",
+        "name": "Green Office",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3579d1d4007b23b0",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "41e9e3dbe95fea13",
+        "type": "ui_group",
+        "name": "ENV",
+        "tab": "c8b658a11d65050f",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2f7c20d0ba063d8b",
+        "type": "ui_group",
+        "name": "AC Status",
+        "tab": "c8b658a11d65050f",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "caa93ac64641f010",
+        "type": "mqtt in",
+        "z": "da9b7dd6ae72f571",
+        "name": "",
+        "topic": "greenoffice/sensor/env/+",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "01d7ac7240a0bfe5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 250,
+        "y": 80,
+        "wires": [
+            [
+                "dd4e76c7809b297d",
+                "7be88c5f7008e065",
+                "efd80ac5a361e6d6"
+            ]
+        ]
+    },
+    {
+        "id": "e75014ddc229a6a2",
+        "type": "change",
+        "z": "da9b7dd6ae72f571",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temperature_c",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "DESK_ID",
+                "tot": "env"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 220,
+        "wires": [
+            [
+                "b0640dfd8b810481"
+            ]
+        ]
+    },
+    {
+        "id": "b0640dfd8b810481",
+        "type": "ui_gauge",
+        "z": "da9b7dd6ae72f571",
+        "name": "",
+        "group": "41e9e3dbe95fea13",
+        "order": 0,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Temperature {{msg.topic}}",
+        "label": "oC",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 210,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "dd4e76c7809b297d",
+        "type": "switch",
+        "z": "da9b7dd6ae72f571",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "DESK_ID",
+                "vt": "env"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 210,
+        "y": 160,
+        "wires": [
+            [
+                "e75014ddc229a6a2"
+            ]
+        ]
+    },
+    {
+        "id": "ae0294160bf41719",
+        "type": "change",
+        "z": "da9b7dd6ae72f571",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.light_lux",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "DESK_ID",
+                "tot": "env"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 220,
+        "wires": [
+            [
+                "e9b1436a15d36835"
+            ]
+        ]
+    },
+    {
+        "id": "e9b1436a15d36835",
+        "type": "ui_gauge",
+        "z": "da9b7dd6ae72f571",
+        "name": "",
+        "group": "41e9e3dbe95fea13",
+        "order": 0,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Brightness {{msg.topic}}",
+        "label": "Lux",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#b30000",
+            "#00e61b",
+            "#fcc603"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 430,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "7be88c5f7008e065",
+        "type": "switch",
+        "z": "da9b7dd6ae72f571",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "DESK_ID",
+                "vt": "env"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 430,
+        "y": 160,
+        "wires": [
+            [
+                "ae0294160bf41719"
+            ]
+        ]
+    },
+    {
+        "id": "efd80ac5a361e6d6",
+        "type": "debug",
+        "z": "da9b7dd6ae72f571",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "bd92c2eea5828d78",
+        "type": "change",
+        "z": "674080d8d83bad96",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.is_running",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "AC_ID",
+                "tot": "env"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 200,
+        "wires": [
+            [
+                "3456693849843598"
+            ]
+        ]
+    },
+    {
+        "id": "b7d5972d6e917012",
+        "type": "switch",
+        "z": "674080d8d83bad96",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "AC_ID",
+                "vt": "env"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 250,
+        "y": 140,
+        "wires": [
+            [
+                "bd92c2eea5828d78"
+            ]
+        ]
+    },
+    {
+        "id": "3456693849843598",
+        "type": "ui_text",
+        "z": "674080d8d83bad96",
+        "group": "2f7c20d0ba063d8b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Status {{msg.topic}}",
+        "format": "{{msg.payload ? \"ON\" : \"OFF\"}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 250,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "2622a45cc26ac62a",
+        "type": "mqtt in",
+        "z": "674080d8d83bad96",
+        "name": "",
+        "topic": "greenoffice/sensor/ac/+",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "01d7ac7240a0bfe5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 80,
+        "wires": [
+            [
+                "b7d5972d6e917012"
+            ]
+        ]
+    },
+    {
+        "id": "6a718d8bee5d95d8",
+        "type": "subflow:da9b7dd6ae72f571",
+        "z": "28c1f6723d4dba29",
+        "name": "ENV",
+        "x": 110,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "2acf42dda694c13d",
+        "type": "subflow:da9b7dd6ae72f571",
+        "z": "28c1f6723d4dba29",
+        "name": "ENV",
+        "env": [
+            {
+                "name": "DESK_ID",
+                "value": "env_desk_02",
+                "type": "str"
+            },
+            {
+                "name": "AC_ID",
+                "value": "ac_02",
+                "type": "str"
+            }
+        ],
+        "x": 110,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "1a63e99ba388a746",
+        "type": "subflow:da9b7dd6ae72f571",
+        "z": "28c1f6723d4dba29",
+        "name": "ENV",
+        "env": [
+            {
+                "name": "DESK_ID",
+                "value": "env_desk_03",
+                "type": "str"
+            },
+            {
+                "name": "AC_ID",
+                "value": "ac_03",
+                "type": "str"
+            }
+        ],
+        "x": 110,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "9a2124371b1f9814",
+        "type": "subflow:da9b7dd6ae72f571",
+        "z": "28c1f6723d4dba29",
+        "name": "ENV",
+        "env": [
+            {
+                "name": "DESK_ID",
+                "value": "env_desk_04",
+                "type": "str"
+            },
+            {
+                "name": "AC_ID",
+                "value": "ac_04",
+                "type": "str"
+            }
+        ],
+        "x": 110,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "fc5735632d3ffbfc",
+        "type": "subflow:da9b7dd6ae72f571",
+        "z": "28c1f6723d4dba29",
+        "name": "ENV",
+        "env": [
+            {
+                "name": "DESK_ID",
+                "value": "env_desk_05",
+                "type": "str"
+            },
+            {
+                "name": "AC_ID",
+                "value": "ac_05",
+                "type": "str"
+            }
+        ],
+        "x": 110,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "f31534a21bcb2bfa",
+        "type": "subflow:da9b7dd6ae72f571",
+        "z": "28c1f6723d4dba29",
+        "name": "ENV",
+        "env": [
+            {
+                "name": "DESK_ID",
+                "value": "env_desk_06",
+                "type": "str"
+            },
+            {
+                "name": "AC_ID",
+                "value": "ac_06",
+                "type": "str"
+            }
+        ],
+        "x": 110,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "9106f814223592aa",
+        "type": "subflow:da9b7dd6ae72f571",
+        "z": "28c1f6723d4dba29",
+        "name": "ENV",
+        "env": [
+            {
+                "name": "DESK_ID",
+                "value": "env_desk_07",
+                "type": "str"
+            },
+            {
+                "name": "AC_ID",
+                "value": "ac_07",
+                "type": "str"
+            }
+        ],
+        "x": 110,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "f5c634394290932f",
+        "type": "subflow:674080d8d83bad96",
+        "z": "28c1f6723d4dba29",
+        "name": "",
+        "x": 120,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "3afc2a0d9690230d",
+        "type": "subflow:674080d8d83bad96",
+        "z": "28c1f6723d4dba29",
+        "name": "",
+        "env": [
+            {
+                "name": "AC_ID",
+                "value": "ac_02",
+                "type": "str"
+            }
+        ],
+        "x": 120,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "e94e833f524f0b01",
+        "type": "subflow:674080d8d83bad96",
+        "z": "28c1f6723d4dba29",
+        "name": "",
+        "env": [
+            {
+                "name": "AC_ID",
+                "value": "ac_03",
+                "type": "str"
+            }
+        ],
+        "x": 120,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "e45c6eb7fb639c72",
+        "type": "subflow:674080d8d83bad96",
+        "z": "28c1f6723d4dba29",
+        "name": "",
+        "env": [
+            {
+                "name": "AC_ID",
+                "value": "ac_04",
+                "type": "str"
+            }
+        ],
+        "x": 120,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "4de4ab4377e2b715",
+        "type": "subflow:674080d8d83bad96",
+        "z": "28c1f6723d4dba29",
+        "name": "",
+        "env": [
+            {
+                "name": "AC_ID",
+                "value": "ac_05",
+                "type": "str"
+            }
+        ],
+        "x": 120,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "8cea308634d6ccc6",
+        "type": "subflow:674080d8d83bad96",
+        "z": "28c1f6723d4dba29",
+        "name": "",
+        "env": [
+            {
+                "name": "AC_ID",
+                "value": "ac_06",
+                "type": "str"
+            }
+        ],
+        "x": 120,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "59618f20c5e6cc57",
+        "type": "subflow:674080d8d83bad96",
+        "z": "28c1f6723d4dba29",
+        "name": "",
+        "env": [
+            {
+                "name": "AC_ID",
+                "value": "ac_07",
+                "type": "str"
+            }
+        ],
+        "x": 120,
+        "y": 680,
+        "wires": []
+    }
+]
